@@ -6,11 +6,12 @@ class Sand
             'friction': 5,
             'density': 1,
         }
-        this.body=Bodies.circle(x,y,5,option);
-        World.add(world,this.body);
+        this.body=Bodies.circle(x,y,20,option);
         
-        this.width=20;
-        this.height=20;
+        this.x=x;
+        this.y=y;
+        this.radius=20
+        World.add(world,this.body);
     }
 
     display()
@@ -22,7 +23,7 @@ class Sand
         fill('blue');
         rotate(angle);
         rectMode(CENTER);
-        rect(0,0,this.width,this.height);
+        ellipse(this.x,this.y,this.radius,this.radius);
         pop();     
     }
 }

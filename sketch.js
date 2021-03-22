@@ -22,20 +22,19 @@ function setup() {
 	ground=new Ground(400,height,800,30);
 	hammer=new Hammer(350,600);
 	rubber=new Rubber(400,600);
-	sand1=new Sand(250,600);
-	sand2=new Sand(270,600);
-	sand3=new Sand(290,600);
-	sand4=new Sand(310,600);
-	sand5=new Sand(320,600);
-	sand6=new Sand(350,600);
-	iron=new Iron(200,600);
+	sand1=new Sand(250,100);
+	sand2=new Sand(270,100);
+	sand3=new Sand(290,100);
+	sand4=new Sand(310,100);
+	sand5=new Sand(330,100);
+	sand6=new Sand(350,100);
+	iron=new Iron(200,500);
 	Engine.run(engine);
   
 }
 
 
 function draw() {
-  rectMode(CENTER);
   background('#ADD8E6');
    
   stone.display();
@@ -49,7 +48,6 @@ function draw() {
   sand5.display();
   sand6.display();
   iron.display();
-  drawSprites();
  
 }
 

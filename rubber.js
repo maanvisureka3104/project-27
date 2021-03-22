@@ -7,11 +7,12 @@ class Rubber
             'friction': 5,
             'density': 1,
         }
-        this.body=Bodies.circle(x,y,10,option);
+        this.body=Bodies.circle(x,y,40,option);
+        this.radius=40;
+        this.x=x;
+        this.y=y;
         World.add(world,this.body);
         
-        this.width=80;
-        this.height=80;
     }
 
     display()
@@ -22,8 +23,8 @@ class Rubber
         translate(pos.x,pos.y);
         fill('blue');
         rotate(angle);
-        rectMode(CENTER);
-        rect(0,0,this.width,this.height);
+        // circleMode(CENTER);
+        ellipse(100,100,this.radius,this.radius);
         pop();     
     }
 }
